@@ -12,6 +12,9 @@ def main():
         
         else: 
             cal_split = cal.split(" ")
+    
+            cal_split[:] = [x for x in cal_split if x != ""]
+
             a = float(cal_split[1])
             b = float(cal_split[2])
 
@@ -44,7 +47,7 @@ def main():
                 print mod(a, b)
             else: 
                 print "ERROR"
-    
+
 
 if __name__ == '__main__':
     main()
